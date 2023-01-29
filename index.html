@@ -165,7 +165,7 @@
             <h3 class="about__content-title">Conheça-me!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                Olá! :), Aqui é o 
+                Olá!✌️😊, Aqui é o 
                 <strong>Vanderley Oliveira, </strong>
                 e eu sou um <strong> Desenvolvedor Web Frontend. </strong> Moro no Brasil - Distrito Federal - Brasilia. Támbem me encontro
                 <strong> remoto. </strong>
@@ -320,6 +320,7 @@
                 required
                 placeholder="Digite seu nome"
                 type="name"
+                onkeypress="return lettersOnly(event);"
                 class="contact__form-input"
                 name="name"
                 id="name"
@@ -329,9 +330,15 @@
 
             <div class="contact__form-field">
               <label class="contact__form-label" name="email">Email</label>
+              
+              <span id="lblError" 
+              style="color: red">
+              </span>
+
               <input
                 required
                 placeholder="Digite seu melhor email"
+                onkeyup="ValidateEmail();" 
                 type="email"
                 class="contact__form-input"
                 name="email"
@@ -345,6 +352,7 @@
                 required
                 placeholder="Digite seu numero"
                 type="text"
+                onkeypress="return numberOnly(theEvent);"
                 class="contact__form-input"
                 name="Numero"
                 id="name"
@@ -421,7 +429,7 @@
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Vanderley Oliveira</h4>
             <p class="main-footer__short-desc">
-              Agradeço a visita. Espero que retorne para veja e avalie meus futuros projetos.
+              Agradeço a visita. Espero que retorne para que veja e avalie meus futuros projetos.
               Até mais 👋🤩
             </p>
           </div>

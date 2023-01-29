@@ -38,3 +38,34 @@ headerLogoConatiner.addEventListener('click', () => {
 })
 
 //--- Formulario
+
+const numberOnly = (evt) => {
+  const theEvent = evt || window.event;
+  const key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  const regex = /^[0-9.]+$/;
+  if (!regex.test(key)) {
+     theEvent.returnValue = false;
+     if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+};
+
+const lettersOnly = (evt) => {
+  const event = evt || window.event;
+  const charCode = event.keyCode || event.which;
+  const isSpace = charCode == 32;
+  const isBackspace = charCode == 8;
+  const isUppercaseChars = charCode > 64 && charCode < 91;
+  const isLowercaseChars = charCode > 96 && charCode < 123;
+  return (isUppercaseChars || isLowercaseChars || isBackspace || isSpace);
+};
+
+f function ValidateEmail() {
+  var email = document.getElementById("email").value;
+  var lblError = document.getElementById("lblError");
+  lblError.innerHTML = "";
+  var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if (!expr.test(email)) {
+      lblError.innerHTML = "E-mail invalido. Digite seu melhor e-mail.";
+  }
+}
