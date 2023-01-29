@@ -60,7 +60,7 @@ const lettersOnly = (evt) => {
   return (isUppercaseChars || isLowercaseChars || isBackspace || isSpace);
 };
 
-f function ValidateEmail() {
+ function ValidateEmail() {
   var email = document.getElementById("email").value;
   var lblError = document.getElementById("lblError");
   lblError.innerHTML = "";
