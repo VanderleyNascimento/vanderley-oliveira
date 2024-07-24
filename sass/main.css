@@ -474,11 +474,6 @@ textarea {
   font-weight: 600;
   font-size: 1.6rem;
 }
-.contact__form-input:-ms-input-placeholder {
-  color: #999;
-  font-weight: 600;
-  font-size: 1.6rem;
-}
 .contact__form-input::placeholder {
   color: #999;
   font-weight: 600;
@@ -892,12 +887,6 @@ textarea {
 }
 
 @keyframes wheel {
-  to {
-    opacity: 0;
-    top: 27px;
-  }
-}
-@-webkit-keyframes wheel {
   to {
     opacity: 0;
     top: 27px;
