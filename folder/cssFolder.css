@@ -1,0 +1,164 @@
+/* Estilos gerais */
+body {
+    width: 100%;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+  }
+  
+  .email-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+  }
+  
+  /* Estilos para o cabeçalho */
+  .email-header {
+    text-align: center;
+    background-color: #219be4;
+    padding: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .success-message {
+    font-size: 35px;
+    color: #FFFFFF;
+    line-height: 53px;
+    margin-bottom: 10px;
+  }
+  
+  .header-image {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Estilos para a seção de conteúdo */
+  .content-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-message {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 29px;
+    color: #ff8c00;
+  }
+  
+  .message-text {
+    font-size: 16px;
+    color: #808080;
+    line-height: 1.5;
+  }
+  
+  .es-button {
+    display: inline-block;
+    background-color: #219be4;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .es-button i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+  }
+  
+  /* Estilos para a seção de contato */
+  .contact-section {
+    text-align: center;
+  }
+  
+  .contact-heading {
+    color: #3aada8;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info { /* Container do email */
+    display: flex;
+    align-items: center; /* Alinhar verticalmente ao centro */
+    margin-bottom: 10px; 
+  }
+  
+  .contact-info i { /* Ícone do email */
+    margin-right: 10px;
+    font-size: 24px; /* Aumentar o tamanho do ícone */
+  }
+  
+  .contact-info h4 { /* Texto "E-mail:" */
+    margin: 0; /* Remover margens padrão */
+    font-weight: bold; /* Deixar em negrito */
+    display: inline; /* Manter na mesma linha que o ícone */
+  }
+  
+  .contact-info a { /* Link do email */
+    color: #007bff; /* Cor azul do link */
+    text-decoration: none; /* Remover sublinhado */
+    margin-left: 5px; /* Adicionar um pequeno espaçamento à esquerda */
+  }
+
+  .contact-info p { /* Número de telefone */
+    color: #666; /* Cinza */
+    margin: 0 0 0 5px; /* Adiciona um pequeno espaçamento à esquerda */
+}
+
+  .social-media i {
+    margin-right: 10px;
+    font-size: 20px; 
+  }
+  
+  .social-media {
+    margin-bottom: 20px;
+  }
+  
+  .social-media a {
+    margin: 0 5px;
+    color: #333; /* Cor padrão para os ícones */
+  }
+  
+  .social-media a:hover {
+    color: #219be4; /* Cor dos ícones ao passar o mouse */
+  }
+  
+  /* Estilos para o rodapé */
+  .email-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilos para o copyright */
+  .copyright {
+    background-color: #333333;
+    color: #efefef;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .view-home-link {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
