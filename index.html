@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Porfolio Vanderley</title>
     <meta name="description" content="Bem vindo ao meu site! 👋🤩" />
+    <link rel="icon" href="assets/png/profile-pic.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="sass/main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
 
 
     <link
@@ -29,7 +28,7 @@
           <div class="header__logo-img-cont">
             <img
               src="./assets/png/profile-pic.png"
-              alt="Ram Maheshwari Logo Image"
+              alt="Vanderley Logo Image"
               class="header__logo-img"
             />
           </div>
@@ -73,7 +72,7 @@
               <a href="./index.html"> Home </a>
             </li>
 
-            <li class="header__sm-menu-link">
+            <li class="header__sm-menu-link ">
               <a href="./index.html#about"> Sobre </a>
             </li>
 
@@ -88,11 +87,11 @@
         </div>
       </div>
     </header>
-    <section class="home-hero">
+    <section class="home-hero ">
       <div class="home-hero__content">
-        <h1 class="heading-primary">Olá, Meu nome é Vanderley</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
+        <h1 class="heading-primary sr-bottom sr-active">Olá, Meu nome é Vanderley</h1>
+        <div class="home-hero__info ">
+          <p class="text-primary sr-bottom sr-active">
             Seja bem vindo ao meu portifolio. Aqui você encontrará todos os meus projetos e poderá conhecer melhor
             minhas habilidades em programação. Hoje com foco maior em Desenvolvimento Web FrontEnd.
             Sinta-se a vontade para conhecer melhor o meu trabalho.
@@ -157,7 +156,7 @@
         <div class="mouse"></div>
       </div>
     </section>
-    <section id="about" class="about sec-pad">
+    <section id="about" class="about sec-pad sr-left sr-active">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Sobre mim</span>
@@ -177,20 +176,8 @@
 
                 Sou um apaixonado por produtos digitais, tendo utilizado centenas de aplicativos web e mobile ao longo dos anos. Essa paixão me impulsiona a criar designs inspiradores e soluções inovadoras para meus clientes.
                 
-                <!-- Olá!✌️😊, Aqui é o 
-                <strong>Vanderley Oliveira, </strong>
-                e eu sou um <strong> Desenvolvedor Web Frontend. </strong> Moro no Brasil - Distrito Federal - Brasilia. Támbem me encontro
-                <strong> remoto. </strong>
-                projetos para agencias, consultorias para Startups, e colaboração com pessoas talentosas em 
-                <strong>produtos digitais </strong>
-                tanto para uso comercial quanto para o consumidor. -->
-              </p>
               <p class="about__content-details-para">
                 Entre em contato comigo hoje mesmo para discutir seus projetos e como posso te ajudar a criar produtos digitais incríveis!
-                <!-- Eu sou um pouco viciado em produtos digitais. 
-                Ao longo dos anos, utilizei centenas de aplicativos Web e aplicações mobile. Obtive uma paixão em
-                criar designer inspirados nas minhas melhores avaliacões. Sinta-se livre para 
-                <strong>entrar em contato</strong> aqui. -->
               </p>
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
@@ -227,7 +214,7 @@
 
         <!--────────────────Projetos───────────────--> 
 
-    <section id="projects" class="projects sec-pad">
+    <section id="projects" class="projects sec-pad sr-left sr-active">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projetos</span>
@@ -237,7 +224,7 @@
         </h2>
          <!--────────────────Projetos1 ───────────────--> 
 
-        <div class="projects__content">
+        <div class="projects__content sr-left sr-active">
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
@@ -262,7 +249,7 @@
           </div>
            <!--────────────────Projetos2 ───────────────--> 
 
-          <div class="projects__row">
+          <div class="projects__row sr-left sr-active">
             <div class="projects__row-img-cont">
               <img
                 src="assets/img-projetos/tela-apeperia.png"
@@ -340,7 +327,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
 
-            <div class="contact__form-field">
+            <div class="contact__form-field sr-bottom sr-active">
               <label class="contact__form-label" name="name">Seu nome</label>
               <input
                 required
@@ -354,8 +341,8 @@
             </div>
 
 
-            <div class="contact__form-field">
-              <label class="contact__form-label" name="email">Email</label>
+            <div class="contact__form-field sr-bottom sr-active">
+              <label class="contact__form-label" for="email">Email</label>
               
               <span id="lblError" 
               style="color: red">
@@ -372,13 +359,13 @@
               />
             </div>
 
-            <div class="contact__form-field">
-              <label class="contact__form-label" name="nunber">Numero de Telefone</label>
+            <div class="contact__form-field sr-bottom sr-active">
+              <label class="contact__form-label" for="nunber">Numero de Telefone</label>
               <input
                 required
                 placeholder="Digite seu numero"
                 type="text"
-                onkeypress="return numberOnly(theEvent);"
+                onkeypress="return numberOnly(event);"
                 class="contact__form-input"
                 name="Numero"
                 id="name"
@@ -386,7 +373,7 @@
             </div>
 
 
-            <div class="contact__form-field">
+            <div class="contact__form-field sr-bottom sr-active">
               <label class="contact__form-label" name="message">Messagem</label>
               <textarea
                 required
@@ -399,7 +386,7 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn--theme contact__btn">
+            <button type="submit" class="btn btn--theme contact__btn sr-bottom sr-active">
               Inscreva-se
             </button>
 
@@ -452,16 +439,15 @@
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Vanderley Oliveira</h4>
             <p class="main-footer__short-desc">
-              Agradeço a visita. Espero que retorne para que veja e avalie meus futuros projetos.
-              Até mais 👋🤩
+              Foi um prazer recebê-lo(a) por aqui! Espero que volte em breve para conferir as novidades e me dar seu feedback sobre meus próximos projetos. Até a próxima! 👋🤩
             </p>
           </div>
         </div>
 
        
         <div class="main-footer__lower">
-          &copy; Copyright 2021-2023. Produzido por 
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+          &copy; Copyright 2021-2024. Produzido por 
+          <a rel="noreferrer" target="_blank" href="https://github.com/rammcodes/dopefolio"
             >Ram Maheshwari</a>
             e 
             <a rel="noreferrer" target="_blank" href="https://github.com/VanderleyNascimento"
@@ -471,5 +457,6 @@
     </footer>
 
     <script src="./index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </body>
 </html>

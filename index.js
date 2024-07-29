@@ -30,24 +30,54 @@ for (let i = 0; i < headerSmallMenuLinks.length; i++) {
   })
 }
 
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
+const headerLogoContainer = document.querySelector('.header__logo-container');
 
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
+headerLogoContainer.addEventListener('click', () => {
+  location.href = 'index.html';
+});
+
+// ScrollReveal
+document.addEventListener("DOMContentLoaded", function() {
+  // Verifique se o ScrollReveal está carregado
+  if (typeof ScrollReveal !== 'undefined') {
+    console.log("ScrollReveal está carregado");
+
+    // Configuração do ScrollReveal
+    ScrollReveal().reveal('.sr-top, .sr-bottom, .sr-left, .sr-right', {
+      delay: 300, // Usar o valor de $sr-delay em milissegundos
+      distance: '30px', // Usar o valor de $sr-distance
+      duration: 1000, // Usar o valor de $sr-duration em milissegundos
+      easing: 'ease', // Usar o valor de $sr-easing
+      reset: true, // Para permitir que as animações se repitam ao rolar para cima e para baixo
+      afterReveal: function(el) {
+        el.classList.add('sr-active');
+      },
+      afterReset: function(el) {
+        el.classList.remove('sr-active');
+      }
+    });
+
+    console.log("ScrollReveal está configurado");
+  } else {
+    console.log("ScrollReveal não está carregado");
+  }
+});
 
 //--- Formulario
 
 const numberOnly = (evt) => {
   const theEvent = evt || window.event;
   const key = theEvent.keyCode || theEvent.which;
-  key = String.fromCharCode( key );
-  const regex = /^[0-9.]+$/;
-  if (!regex.test(key)) {
-     theEvent.returnValue = false;
-     if(theEvent.preventDefault) theEvent.preventDefault();
+  const keyValue = String.fromCharCode(key);
+
+  // Verifica se o caractere é um número
+  const regex = /^[0-9]+$/;
+  if (!regex.test(keyValue)) {
+    theEvent.returnValue = false;
+    if (theEvent.preventDefault) theEvent.preventDefault();
+    return false;
   }
+  return true;
 };
 
 const lettersOnly = (evt) => {
@@ -69,3 +99,5 @@ const lettersOnly = (evt) => {
       lblError.innerHTML = "E-mail invalido. Digite seu melhor e-mail.";
   }
 }
+
+
