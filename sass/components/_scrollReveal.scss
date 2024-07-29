@@ -1,0 +1,33 @@
+// Configurações globais
+$sr-delay: 300ms;       // Atraso padrão
+$sr-distance: 30px;     // Distância padrão
+$sr-duration: 1000ms;   // Duração padrão
+$sr-easing: ease;       // Easing padrão
+
+// Mixin para facilitar a reutilização
+@mixin sr-base($translate, $distance) {
+  opacity: 0;
+  transform: translate#{$translate}($distance); // Interpolação de string
+  transition: opacity $sr-duration $sr-easing, transform $sr-duration $sr-easing;
+
+  &.sr-active { // Estado após a animação
+    opacity: 1;
+    transform: translate#{$translate}(0); // Interpolação de string
+  }
+}
+// Classes de animação
+.sr-top {
+    @include sr-base('Y', -$sr-distance); // Animação de cima para baixo
+  }
+  
+  .sr-bottom {
+    @include sr-base('Y', $sr-distance); // Animação de baixo para cima
+  }
+  
+  .sr-left {
+    @include sr-base('X', -$sr-distance); // Animação da esquerda para a direita
+  }
+  
+  .sr-right {
+    @include sr-base('X', $sr-distance); // Animação da direita para a esquerda
+  }

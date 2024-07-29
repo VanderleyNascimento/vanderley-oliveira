@@ -1,19 +1,22 @@
+// Importações dos abstracts primeiro (variáveis, mixins, etc
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-
-
-@import 'base/base';
-
 @import 'abstracts/utilities';
 
+// Importações da base
+@import 'base/base';
+
+// Importações das páginas
 @import 'pages/home';
 @import 'pages/project-case-study';
 
+
+// Importações dos componentes
 @import 'components/header';
 @import 'components/footer';
 @import 'components/skills';
 @import 'components/mouse-scroll';
-
+@import 'components/scrollReveal';
 
 
 
