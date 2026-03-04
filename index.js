@@ -1,4 +1,4 @@
-// ---
+﻿// ---
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
 const smallMenu = document.querySelector('.header__sm-menu')
 const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
@@ -229,30 +229,36 @@ if (projectOpenButtons.length > 0 && projectDetailsSection) {
 }
 
 // ScrollReveal
-document.addEventListener("DOMContentLoaded", function() {
-  // Verifique se o ScrollReveal está carregado
-  if (typeof ScrollReveal !== 'undefined') {
-    console.log("ScrollReveal está carregado");
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof ScrollReveal === 'undefined') return;
 
-    // Configuração do ScrollReveal
-    ScrollReveal().reveal('.sr-top, .sr-bottom, .sr-left, .sr-right', {
-      delay: 300, // Usar o valor de $sr-delay em milissegundos
-      distance: '30px', // Usar o valor de $sr-distance
-      duration: 1000, // Usar o valor de $sr-duration em milissegundos
-      easing: 'ease', // Usar o valor de $sr-easing
-      reset: true, // Para permitir que as animações se repitam ao rolar para cima e para baixo
-      afterReveal: function(el) {
-        el.classList.add('sr-active');
-      },
-      afterReset: function(el) {
-        el.classList.remove('sr-active');
-      }
-    });
+  // Configuracao base - sem reset, animacao acontece uma unica vez
+  const sr = ScrollReveal({
+    distance: '30px',
+    duration: 900,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    reset: false,
+    viewFactor: 0.15,
+  });
 
-    console.log("ScrollReveal está configurado");
-  } else {
-    console.log("ScrollReveal não está carregado");
-  }
+  // Hero: eyebrow desce do topo, h1 e lead sobem do fundo com delay escalonado
+  sr.reveal('.home-hero__eyebrow', { origin: 'top',    delay: 200 });
+  sr.reveal('.heading-primary',    { origin: 'bottom', delay: 350 });
+  sr.reveal('.home-hero__lead',    { origin: 'bottom', delay: 500 });
+  sr.reveal('.home-hero__cta',     { origin: 'bottom', delay: 650 });
+
+  // Secao Sobre - heading e paineis lado a lado
+  sr.reveal('.about .heading-sec__main',   { origin: 'bottom', delay: 150 });
+  sr.reveal('.about .heading-sec__sub',    { origin: 'bottom', delay: 250 });
+  sr.reveal('.about__content-main',        { origin: 'bottom', delay: 200 });
+  sr.reveal('.about__content-skills',      { origin: 'bottom', delay: 350 });
+
+  // Secao Projetos - heading e cards em cascata
+  sr.reveal('.projects .heading-sec__main', { origin: 'bottom', delay: 150 });
+  sr.reveal('.projects__row',               { origin: 'bottom', delay: 150, interval: 150 });
+
+  // Secao Contato
+  sr.reveal('.contact__cta-container', { origin: 'bottom', delay: 200 });
 });
 
 //--- Formulario

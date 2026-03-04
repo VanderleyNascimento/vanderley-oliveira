@@ -31,3 +31,15 @@ $sr-easing: ease;       // Easing padrão
   .sr-right {
     @include sr-base('X', $sr-distance); // Animação da direita para a esquerda
   }
+
+// Acessibilidade: respeita preferência do sistema de redução de animações
+@media (prefers-reduced-motion: reduce) {
+  .sr-top,
+  .sr-bottom,
+  .sr-left,
+  .sr-right {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
